@@ -1,0 +1,27 @@
+@media only screen and (max-width: 100px) {
+	header {
+		div.contenido {
+			display: inline;
+			ul {
+				display: inline;
+				li {
+					display: inline;
+				}
+			}
+		}
+		div.contenido-header {
+			width: 100%;
+			display: inline;
+		}
+	}
+}
+@media only screen and (max-width:100px) {
+	ul {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	li {
+		width: 100%;
+		box-sizing: border-box;
+	}
+}

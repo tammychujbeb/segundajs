@@ -1,0 +1,361 @@
+@mixin parrafo{
+	font-size: 14px;
+			line-height: 25px;
+			color: $color_3;
+			margin-bottom: 12px;
+}
+#Nosotros {
+	max-width: 1100px;
+	margin: auto;
+	padding: 100px 15px;
+	color: $color_1;
+	display: flex;
+	.contenedor-foto {
+		max-width: 700px;
+		margin-right: 90px;
+		img {
+			padding: 20px;
+			width: 100%;
+			border-radius: 20px;
+			background-color: $background-color_1;
+		}
+	}
+
+
+	
+	}
+	.Nosotros {
+		margin: 0 40px;
+		.titulo-seccion {
+			font-size: 22px;
+			text-transform: uppercase;
+			color: $color_1;
+			text-decoration: underline;
+			text-decoration-color: #e14f4f;
+			text-decoration-thickness: 5px;
+		}
+		h2 {
+			font-size: 34px;
+			font-weight: bold;
+			margin: 20px 0;
+			letter-spacing: 2px;
+			span {
+				color: $color_2;
+			}
+		}
+		h3 {
+			font-size: 18px;
+			font-weight: 500;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			letter-spacing: 1px;
+		}
+		p {
+			@include parrafo;
+		}
+		a {
+			display: inline-block;
+			text-decoration: none;
+			color: $color_4;
+			border-radius: 30px;
+			border: 1px solid #000;
+			padding: 10px 20px;
+			margin-top: 30px;
+			transition: .5s;
+			&:hover {
+				background-color: $background-color_2;
+				color: $color_5;
+			}
+		}
+	}
+
+
+#locales {
+	padding: 100px 15px;
+	text-align: center;
+	background-image: linear-gradient(to right top, rgb(203, 172, 208),#b46ca8,#bb1ba3);
+}
+$background-color_1: rgba(0, 0, 0, .8);
+/* seccion SOBRE MI */
+/* seccion  LOCALES */
+/* seccion HABLIDADES MI */
+/* seccion HAMBURGUESA */
+/* seccion CONTACTO */
+@media screen and (max-width: 800px) {
+	.redes {
+		display: none;
+	}
+	nav {
+		display: none;
+	}
+	nav.responsive {
+		display: block;
+		background-color: $background-color_1;
+		width: 100%;
+		position: absolute;
+		top: 48px;
+		left: 0;
+		padding: 10px 0;
+		ul {
+			display: block !important;
+			text-align: center;
+			li {
+				margin: 5px 0;
+			}
+		}
+	}
+	#icono-nav {
+		display: block;
+	}
+
+	/*agrego*/
+
+	
+	.contenedor {
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 20px;
+	}
+	#inicio {
+		.contenido {
+			.presentacion {
+				h2 {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+	#Nosotros {
+		padding: 50px 0;
+		display: block;
+		.contenedor-foto {
+			max-width: 200px;
+			margin: auto;
+			img {
+				padding: 8px;
+			}
+		}
+		.Nosotros {
+			.titulo-seccion {
+				text-align: center;
+				
+			}
+			h2 {
+				font-size: 25px;
+				text-align: center;
+			}
+		}
+	}
+
+	
+	
+	/* *********************/
+	/* seccion S E R V I C I O S */
+	/* *********************/
+	#servicio{
+		padding: 50px 15px;
+		text-align: center;
+		background-color: $background-color_1;
+		.titulo-seccion {
+			text-align: center;
+			font-size: 22px;
+			text-transform: uppercase;
+			color: $color_1;
+			text-decoration: underline;
+			text-decoration-color: #d3d3d3;
+			text-decoration-thickness: 5px;
+		}
+		.fila {
+			display: block;
+			justify-content: space-between;
+			max-width: 1100px;
+			margin: 10px auto;
+			.servicio {
+				max-width: 350px;
+				background-color: $background-color_2;
+				padding: 30px;
+				margin: 0 5px;
+				border-radius: 5px;
+				transition: .5s;
+				&:hover {
+					box-shadow: 5px 5px 10px #565656, -5px -5px 10px #8a8a8a;
+				}
+				.icono {
+					display: inline-block;
+					width: 60px;
+					height: 60px;
+					border-radius: 50%;
+					background-color: $background-color_3;
+					padding: 20px;
+					margin-bottom: 25px;
+				}
+				h4 {
+					font-size: 22px;
+					margin-bottom: 25px;
+				}
+				hr {
+					width: 30%;
+					margin: auto;
+					color: $color_2;
+					margin-bottom: 25px;
+				}
+				ul {
+					list-style: none;
+					display: flex;
+					justify-content: space-around;
+					margin-bottom: 10px;
+				}
+				p {
+					font-size: 14px;
+					line-height: 22px;
+				}
+			}
+		}
+	}
+	
+
+
+
+	#locales {
+		padding: 50px 15px;
+	}
+	#servicios {
+		.fila .fila-card {
+			display: block;
+			.servicio {
+				margin: 10px auto;
+			}
+		}
+	}
+	.contenedor-skills {
+		padding: 50px 20px;
+	}
+	#hamburguesa{
+		padding: 50px 0;
+		.fila {
+			display: block;
+			.proyecto {
+				margin: 10px auto;
+			}
+		}
+	}
+	#contacto {
+		padding: 50px 15px;
+		.contenedor-form {
+			.mitad {
+				margin-bottom: 15px;
+				display: block;
+				input {
+					width: 100%;
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}
+$color_1: #fff;
+$background-color_1: #000;
+
+/* *********************/
+/* seccion F O O T E R */
+/* *********************/
+footer {
+	background-color: $background-color_1;
+	color: $color_1;
+	text-align: center;
+	padding: 30px 0;
+	a {
+		text-decoration: none;
+		color: $color_1;
+		display: inline-block;
+		margin: 5px;
+		font-size: 26px;
+	}
+}
+
+$color_2: #fff;$color_1: #111135;
+$background-color_1: #ac2828;
+$background-color_2: #ff5080;
+$background-color_3: #000;
+
+/* *********************/
+/* seccion C O N T A C T O */
+/* *********************/
+/* *********************/
+/* seccion F O O T E R */
+/* *********************/
+#contacto {
+	padding: 100px 15px;
+	background-color: $background-color_1;
+	.titulo-seccion {
+		margin-bottom: 20px;
+		text-align: center;
+		font-size: 22px;
+		text-transform: uppercase;
+		color: $color_1;
+		text-decoration: underline;
+		text-decoration-color: #d3d3d3;
+		text-decoration-thickness: 5px;
+	}
+	.contenedor-form {
+		max-width: 1100px;
+		margin: auto;
+		.fila {
+			margin-bottom: 15px;
+		}
+		.mitad {
+			display: flex;
+			justify-content: space-between;
+			input {
+				width: 48%;
+			}
+		}
+		input {
+			padding: 20px;
+			border-radius: 20px;
+			border: none;
+			border: 1px solid #919191;
+		}
+		textarea {
+			padding: 20px;
+			border-radius: 20px;
+			border: none;
+			border: 1px solid #919191;
+		}
+		.input-full {
+			width: 100%;
+		}
+	}
+	.btn-enviar {
+		display: block;
+		margin: auto;
+		cursor: pointer;
+		transition: .5s;
+		padding: 10px 15px !important;
+		&:hover {
+			background-color: $background-color_2;
+			color: $color_2;
+		}
+	}
+}
+footer {
+	background-color: $background-color_3;
+	color: $color_2;
+	text-align: center;
+	padding: 30px 0;
+	a {
+		text-decoration: none;
+		color: $color_2;
+		display: inline-block;
+		margin: 5px;
+		font-size: 26px;
+	}
+}
+$font-family_1: 'Arial', sans-serif;
+
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
